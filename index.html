@@ -126,10 +126,11 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/tagLE.js"></script>
 
   <script>
    const queryString = window.location.search;
-   console.log("My query "+queryString);
+   console.log("My query: "+queryString);
    const urlParams = new URLSearchParams(queryString);
    const product = urlParams.get('ID_Eli');
    console.log("El id es: "+product);
