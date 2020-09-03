@@ -40,7 +40,6 @@
         <h1 class="header center white-text">Kuzaikun's Web :D</h1>
         <div class="row center">
           <!--h5 class="header col s12 light purple-lighten-text">Welcome to my website</h5-->
-          HERE: <h3 id="demo"></h3>
         </div>
         <br><br>
 
@@ -126,17 +125,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/tagLE.js"></script>
-
-  <script>
-   const queryString = window.location.search;
-   console.log("My query: "+queryString);
-   const urlParams = new URLSearchParams(queryString);
-   const product = urlParams.get('ID_Eli');
-   console.log("El id es: "+product);
-   document.getElementById("demo").innerHTML = product;
-  </script>
-
   </body>
 
 </html>
