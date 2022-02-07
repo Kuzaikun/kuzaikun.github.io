@@ -1,0 +1,14 @@
+{
+  "name": "payment_demo",
+  "version": "1.0.0",
+  "description": "demo for food ent",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "na"
+  ],
+  "author": "Ari",
+  "license": "ISC"
+}
