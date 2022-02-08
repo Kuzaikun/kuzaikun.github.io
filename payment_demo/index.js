@@ -102,9 +102,9 @@ if(checkBox_c3){
   itemSelected_m.push('tacos dorados');
 }
 console.log('item selected: '+itemSelected_m);
-/*
+
  // use correct domain for your region
- const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
+ const domain = 'lo.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
   // encode auth string
  const authString = `${conversationId} || ${botId}`;
  const auth = await sha256(authString);
@@ -120,5 +120,4 @@ console.log('item selected: '+itemSelected_m);
      {"name": "swallow", "value": swallow}
    ],
  });
- */
 }
