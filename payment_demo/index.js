@@ -110,31 +110,24 @@ const submitForm = async function() {
 	const auth = await SHA256(authString);
 	console.log('aaauth ' + auth);
 
+  const data = {
+    botId: botId,
+    conversationId: conversationId,
+    userId: userId,
+    message: "order_taken",
+    contextVariables: [{
+        "name": "itemSelected",
+        "value": itemSelected
+      }]
+  }
+
 	const requestOptions = {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 			'Authorization': auth
 		},
-		body: JSON.stringify({
-			botId: botId,
-			conversationId: conversationId,
-			userId: userId,
-			message: "order_taken",
-			contextVariables: [{
-					"name": "itemSelected",
-					"value": itemSelected
-				},
-				{
-					"name": "itemSelected_c",
-					"value": itemSelected_c
-				},
-				{
-					"name": "itemSelected_m",
-					"value": itemSelected_m
-				}
-			]
-		})
+		body: JSON.stringify(data)
 	};
 
 	fetch(domain, requestOptions)
