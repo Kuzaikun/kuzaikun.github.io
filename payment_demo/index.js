@@ -105,17 +105,16 @@ const submitForm = async function() {
 	// use correct domain for your region
 	const domain = 'lo.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
 	// encode auth string
-	const authString = `${conversationId} || ${botId}`;
+	const authString = conversationId+" || "+botId;
 	console.log(authString);
 	const auth = await SHA256(authString);
-	const bearer = 'Bearer ' + auth;
 	console.log('aaauth ' + auth);
 
 	const requestOptions = {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'Authorization': bearer
+			'Authorization': auth
 		},
 		body: JSON.stringify({
 			botId: botId,
