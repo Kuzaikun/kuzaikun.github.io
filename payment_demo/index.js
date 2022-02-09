@@ -103,7 +103,7 @@ const submitForm = async function() {
 	}
 	console.log('item selected: ' + itemSelected_m);
 	// use correct domain for your region
-	const domain = 'lo.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
+	const domain = 'https://lo.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
 	// encode auth string
 	const authString = conversationId+" || "+botId;
 	console.log(authString);
