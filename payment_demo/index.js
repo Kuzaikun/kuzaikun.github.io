@@ -114,7 +114,7 @@ const submitForm = async function() {
     botId: botId,
     conversationId: conversationId,
     userId: userId,
-    message: "order_taken",
+    message: "request successful",
     contextVariables: [{
         "name": "itemSelected",
         "value": itemSelected
