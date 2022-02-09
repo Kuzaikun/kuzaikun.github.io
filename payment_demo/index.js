@@ -115,7 +115,7 @@ const submitForm = async function() {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'Authorization': auth
+			'Authorization': bearer
 		},
 		body: JSON.stringify({
 			botId: botId,
