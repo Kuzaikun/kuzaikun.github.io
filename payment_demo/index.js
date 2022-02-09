@@ -115,7 +115,7 @@ const submitForm = async function() {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'Authorization': bearer
+			'Authorization': auth
 		},
 		body: JSON.stringify({
 			botId: botId,
@@ -150,7 +150,7 @@ const submitForm = async function() {
 				return Promise.reject(error);
 			}
 		}).catch(err => {
-			console.log('error' + err);
+			console.log('error: ' + err);
 		});
 }
 
