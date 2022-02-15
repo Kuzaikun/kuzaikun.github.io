@@ -119,7 +119,7 @@ const submitForm = async function() {
         "name": "itemSelected",
         "value": itemSelected
       }]
-  }
+  };
 
 	const requestOptions = {
 		method: 'POST',
