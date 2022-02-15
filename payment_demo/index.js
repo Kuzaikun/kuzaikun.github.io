@@ -108,13 +108,13 @@ const submitForm = async function() {
 	const authString = conversationId+" || "+botId;
 	console.log(authString);
 	const auth = await SHA256(authString);
-	console.log('aaauth ' + auth);
+	//console.log('aaauth ' + auth);
 
   const data = {
     botId: botId,
     conversationId: conversationId,
     userId: userId,
-    message: "request successful",
+    //message: "request successful" ,
     contextVariables: [{
         "name": "itemSelected",
         "value": itemSelected
@@ -135,13 +135,15 @@ const submitForm = async function() {
 		.then(async res => {
 			const isJson = res.headers.get('content-type')?.includes('application/json');
 			const data = isJson && await res.json();
-
 			// check for error response
 			if (!res.ok) {
-				// get error message from body or default to response status
+				//get error message from body or default to response status
 				const error = (data && data.message) || res.status;
+
 				return Promise.reject(error);
 			}
+			console.log("data: "+JSON.stringify(data));
+			//window.location.href = "item_selected.html";
 		}).catch(err => {
 			console.log('error: ' + err);
 		});
