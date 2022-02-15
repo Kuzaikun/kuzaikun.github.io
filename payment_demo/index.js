@@ -143,7 +143,7 @@ const submitForm = async function() {
 				return Promise.reject(error);
 			}
 			console.log("data: "+JSON.stringify(data));
-			//window.location.href = "item_selected.html";
+			window.location.href = "item_selected.html";
 		}).catch(err => {
 			console.log('error: ' + err);
 		});
